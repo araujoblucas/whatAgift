@@ -8,9 +8,15 @@ import { Link, useHistory } from 'react-router-dom';
 
 const response = api.get('/');
 
-export default function Example() {
+export default function Example({routeName}) {
     const history = useHistory();
     const [shortNav, setShortNav] = useState('');
+
+    const RecomendeActive =  routeName === 'login' ? 'liActive' : '';
+    const SpecialDateActive = routeName === 'register' ? 'liActive' : '';
+    const FindGiftActive = '';
+    const LoginActive = '';
+
     const handleScroll = () => {
         let position = window.pageYOffset;
 
@@ -49,10 +55,10 @@ useEffect(() => {
         </div>
 
         <div className={'menuLinks'+shortNav}>
-            <li><Link to="/Login">Recomende   </Link></li>
-            <li className="liActive"><Link to="/Register" >Datas Especiais   </Link></li>
-            <li><a href="#">Encontrar Presentes  </a></li>
-            <li><a href="#">Login  </a></li>
+            <li className={RecomendeActive}><NavLink activeClassName='linkActive' to="/Login">Recomende   </NavLink></li>
+            <li className={SpecialDateActive}><NavLink activeClassName='linkActive' to="/Register" >Datas Especiais   </NavLink></li>
+            <li className={FindGiftActive}><a href="#">Encontrar Presentes  </a></li>
+            <li className={LoginActive}><a href="#">Login  </a></li>
         </div>
     </div>
     );

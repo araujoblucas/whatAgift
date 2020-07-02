@@ -7,15 +7,15 @@ import Example from './Nav';
 
 const response = api.get('/');
 
-export default function Login() {
+export default function Login({routeName}) {
     return (
     <div>
-        <Example></Example>
+        <Example routeName={routeName}></Example>
 
         <div style={{marginTop: '80px'}}>
 
             <p >
-                Login
+                {routeName}
             </p>
             </div>
 

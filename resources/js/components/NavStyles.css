@@ -70,6 +70,9 @@
     padding-bottom: 6px !important;
     border-bottom: 4px solid #BB8E6C;
 }
+.linkActive {
+    color: #BB8E6C !important;
+}
 .menuLinks li a {
     color: #fff;
     text-decoration: none;

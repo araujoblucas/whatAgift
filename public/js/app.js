@@ -6416,7 +6416,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "* {\n    box-sizing: border-box;\n}\n.nav {\n    top:0;\n    display: flex;\n    flex-direction: row;\n    position: fixed;\n    width: 100vw;\n    background-color: #32292F;\n    justify-content: space-between;\n    height: 70px;\n    transition: ease-in 1s;\n\n}\n.logo {\n    margin-left: 10vh;\n    display: flex;\n    flex-direction: row;\n    color:#fff;\n\n}\n.logo span {\n    display: flex;\n}\n.logo span p {\n    display: flex;\n    text-align: center;\n    font-size: 18px;\n    line-break: auto;\n    line-height: 18px;\n    align-items: center;\n    margin-top: auto;\n    height: 70px;\n    transition: ease-in 1s;\n}\n.logo h1 {\n    display: flex;\n    height: 70px;\n    align-self: center;\n    vertical-align: middle;\n    text-align: center;\n    font-size: 38px;\n    font-weight: 900;\n    align-items: center;\n    margin-top: auto;\n    height: 70px;\n    transition: ease-in 1s;\n}\n                /** MENU **/\n.menuLinks {\n    margin-top: 0;\n    margin-right: 5vw;\n\n    display: flex;\n    list-style-type: none;\n\n\n}\n.menuLinks li {\n    display: flex;\n\n    text-decoration: none;\n    align-items: flex-end;\n    padding-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n}\n.liActive {\n    padding-bottom: 6px !important;\n    border-bottom: 4px solid #BB8E6C;\n}\n.menuLinks li a {\n    color: #fff;\n    text-decoration: none;\n    align-content: center;\n}\n.menuLinks li a:hover {\n    color: #ddd;\n    text-decoration: none;\n\n}\n\n\n        /* SHORT NAV */\n.navShort {\n    top:0;\n    display: flex;\n    position: fixed;\n    flex-direction: row;\n    height: 50px;\n    width: 100vw;\n    background-color: #32292F;\n    justify-content: space-between;\n    transition: ease-in 1s;\n    margin:0;\n\n}\n.logoShort {\n    margin-left: 10vh;\n    display: flex;\n    flex-direction: row;\n    color:#fff;\n\n}\n.logoShort span {\n    display: flex;\n}\n.logoShort span p {\n    display: flex;\n    height: 50px;\n    transition: ease-in 1s;\n    text-align: center;\n    font-size: 18px;\n    line-break: auto;\n    line-height: 18px;\n    align-items: center;\n    margin-top: auto;\n\n}\n.logoShort h1 {\n    display: flex;\n    align-self: center;\n    vertical-align: middle;\n    text-align: center;\n    font-size: 38px;\n    font-weight: 900;\n    align-items: center;\n    margin-top: auto;\n    height: 50px;\n    transition: ease-in 1s;\n\n}\n                /** MENU **/\n.menuLinksShort {\n    margin-top: 0;\n    margin-right: 5vw;\n    height: 50px;\n    transition: ease-in 1s;\n    display: flex;\n    list-style-type: none;\n\n\n}\n.menuLinksShort li {\n    display: flex;\n\n    text-decoration: none;\n    align-items: flex-end;\n    padding-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n}\n.liActive {\n    padding-bottom: 6px !important;\n    border-bottom: 4px solid #BB8E6C;\n}\n.menuLinksShort li a {\n    color: #fff;\n    text-decoration: none;\n    align-content: center;\n}\n.menuLinksShort li a:hover {\n    color: #ddd;\n    text-decoration: none;\n\n}\n\n", ""]);
+exports.push([module.i, "* {\n    box-sizing: border-box;\n}\n.nav {\n    top:0;\n    display: flex;\n    flex-direction: row;\n    position: fixed;\n    width: 100vw;\n    background-color: #32292F;\n    justify-content: space-between;\n    height: 70px;\n    transition: ease-in 1s;\n\n}\n.logo {\n    margin-left: 10vh;\n    display: flex;\n    flex-direction: row;\n    color:#fff;\n\n}\n.logo span {\n    display: flex;\n}\n.logo span p {\n    display: flex;\n    text-align: center;\n    font-size: 18px;\n    line-break: auto;\n    line-height: 18px;\n    align-items: center;\n    margin-top: auto;\n    height: 70px;\n    transition: ease-in 1s;\n}\n.logo h1 {\n    display: flex;\n    height: 70px;\n    align-self: center;\n    vertical-align: middle;\n    text-align: center;\n    font-size: 38px;\n    font-weight: 900;\n    align-items: center;\n    margin-top: auto;\n    height: 70px;\n    transition: ease-in 1s;\n}\n                /** MENU **/\n.menuLinks {\n    margin-top: 0;\n    margin-right: 5vw;\n\n    display: flex;\n    list-style-type: none;\n\n\n}\n.menuLinks li {\n    display: flex;\n\n    text-decoration: none;\n    align-items: flex-end;\n    padding-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n}\n.liActive {\n    padding-bottom: 6px !important;\n    border-bottom: 4px solid #BB8E6C;\n}\n.linkActive {\n    color: #BB8E6C !important;\n}\n.menuLinks li a {\n    color: #fff;\n    text-decoration: none;\n    align-content: center;\n}\n.menuLinks li a:hover {\n    color: #ddd;\n    text-decoration: none;\n\n}\n\n\n        /* SHORT NAV */\n.navShort {\n    top:0;\n    display: flex;\n    position: fixed;\n    flex-direction: row;\n    height: 50px;\n    width: 100vw;\n    background-color: #32292F;\n    justify-content: space-between;\n    transition: ease-in 1s;\n    margin:0;\n\n}\n.logoShort {\n    margin-left: 10vh;\n    display: flex;\n    flex-direction: row;\n    color:#fff;\n\n}\n.logoShort span {\n    display: flex;\n}\n.logoShort span p {\n    display: flex;\n    height: 50px;\n    transition: ease-in 1s;\n    text-align: center;\n    font-size: 18px;\n    line-break: auto;\n    line-height: 18px;\n    align-items: center;\n    margin-top: auto;\n\n}\n.logoShort h1 {\n    display: flex;\n    align-self: center;\n    vertical-align: middle;\n    text-align: center;\n    font-size: 38px;\n    font-weight: 900;\n    align-items: center;\n    margin-top: auto;\n    height: 50px;\n    transition: ease-in 1s;\n\n}\n                /** MENU **/\n.menuLinksShort {\n    margin-top: 0;\n    margin-right: 5vw;\n    height: 50px;\n    transition: ease-in 1s;\n    display: flex;\n    list-style-type: none;\n\n\n}\n.menuLinksShort li {\n    display: flex;\n\n    text-decoration: none;\n    align-items: flex-end;\n    padding-bottom: 10px;\n    padding-left: 20px;\n    padding-right: 20px;\n}\n.liActive {\n    padding-bottom: 6px !important;\n    border-bottom: 4px solid #BB8E6C;\n}\n.menuLinksShort li a {\n    color: #fff;\n    text-decoration: none;\n    align-content: center;\n}\n.menuLinksShort li a:hover {\n    color: #ddd;\n    text-decoration: none;\n\n}\n\n", ""]);
 
 // exports
 
@@ -70445,12 +70445,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var response = _api__WEBPACK_IMPORTED_MODULE_3__["default"].get('/');
-function Login() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+function Login(_ref) {
+  var routeName = _ref.routeName;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    routeName: routeName
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     style: {
       marginTop: '80px'
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Login")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, routeName)));
 }
 
 if (document.getElementById('Login')) {
@@ -70496,13 +70499,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var response = _api__WEBPACK_IMPORTED_MODULE_3__["default"].get('/');
-function Example() {
+function Example(_ref) {
+  var routeName = _ref.routeName;
   var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useHistory"])();
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
       shortNav = _useState2[0],
       setShortNav = _useState2[1];
+
+  var RecomendeActive = routeName === 'login' ? 'liActive' : '';
+  var SpecialDateActive = routeName === 'register' ? 'liActive' : '';
+  var FindGiftActive = '';
+  var LoginActive = '';
 
   var handleScroll = function handleScroll() {
     var position = window.pageYOffset;
@@ -70529,15 +70538,23 @@ function Example() {
     className: 'logo' + shortNav
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "What", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("br", null), "Gift")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, "A")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: 'menuLinks' + shortNav
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: RecomendeActive
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    activeClassName: "linkActive",
     to: "/Login"
   }, "Recomende   ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "liActive"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: SpecialDateActive
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    activeClassName: "linkActive",
     to: "/Register"
-  }, "Datas Especiais   ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, "Datas Especiais   ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: FindGiftActive
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: "#"
-  }, "Encontrar Presentes  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, "Encontrar Presentes  ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: LoginActive
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: "#"
   }, "Login  "))));
 }
@@ -70604,12 +70621,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var response = _api__WEBPACK_IMPORTED_MODULE_3__["default"].get('/');
-function Register() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+function Register(_ref) {
+  var routeName = _ref.routeName;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    routeName: routeName
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     style: {
       marginTop: '80px'
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Register")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, routeName)));
 }
 
 if (document.getElementById('register')) {
@@ -70644,10 +70664,26 @@ function Routes() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
     exact: true,
-    component: _Login__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: function component() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Register__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        routeName: 'home'
+      });
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/Login",
+    exact: true,
+    component: function component() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Register__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        routeName: 'login'
+      });
+    }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/register",
-    component: _Register__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: function component() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Register__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        routeName: 'register'
+      });
+    }
   })));
 }
 
