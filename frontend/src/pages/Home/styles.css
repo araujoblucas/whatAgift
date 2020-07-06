@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+.container {
+    background-color: #F0F7F4;
+}
+
+
+.section1 {
+    margin-top: 70px;
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.section1 img {
+
+    display: flex;
+    margin-bottom: 0;
+    align-self: flex-end;
+    justify-self: flex-end;
+    height: 100vh;
+
+}
+
+                              /* TEXTOS */
+
+
+.section1 div h1 {
+    margin-top: 125px;
+    margin-left: 15vw;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 50px;
+    overflow-y: hidden;
+    color: #705D56;
+
+}
+
+.section1 div h1 + h1 {
+    margin-top: 0px;
+    margin-left: 15vw;
+    font-size: 58px;
+    overflow-y: hidden;
+    font-weight: 900;
+
+}
+
+.section1 div h2 {
+    margin-left: 15vw;
+    font-size: 24px;
+    line-height: 24px;
+    overflow-y: hidden;
+    font-weight: normal;
+    color: #BB8E6C;
+}
+
+.section1 div h2 + h2 {
+    font-weight: bold;
+    font-style: italic;
+}
+
+                                /* Botões */
+
+.button {
+    margin-top: 20px;
+    margin-left: 19vw;
+    width: 250px;
+    height: 75px;
+    border-radius: 12px;
+    background-color:#BB8E6C;
+    padding: 15px;
+    overflow: hidden;
+
+
+}
+.section1 .button a {
+    color:#fff;
+    font-size: 36px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+
+
+}
+
+
+
+
+                    /* SECTION 2 */
+
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 92vh;
+    text-align: center;
+    background-color: #fff;
+}
+
+.section2 .divH1 {
+    width: 100%;
+}
+
+.section2 .divH1 h1 {
+    margin-top: 8vh;
+    margin-left:10vw;
+    text-align: left;
+    font-size: 44px;
+    font-weight: 900;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color:#503A34;
+}
+
+.section2 .divH1 hr {
+    height: 2.5px;
+    background-color: #000;
+}
+
+.section2 .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.section2 .item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #DBF2EE;
+    width: 250px;
+    height: 320px;
+}
+
+.item h3 {
+    margin-top: 5px ;
+}
+
+
+.section2 .items .item img {
+    width: 150px;
+    height: 270px;
+    margin-top: 10px;
+    margin-left: 50px;
+
+}
