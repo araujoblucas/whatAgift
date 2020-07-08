@@ -1,41 +1,39 @@
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './styles.css';
 import Nav from '../../components/NavBar';
 import Divider from '@material-ui/core/Divider';
 import BackgroundImageSection1 from '../../img/Section1.png';
-
+import BackgroundImageSection3 from '../../img/1.jpeg';
+import api from '../../api';
 
 export default function Home({routeName}) {
+    const [gifts, setGifts] = useState([]);
+        
+    const backGroundImageSection3 = {
+        backgroundImage: 'url(' + BackgroundImageSection3 + ')',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      };
 
 
-    const posts = [
-        {
-            "id": 1,
-            "titulo": "Dia dos Namorados",
-            "imagem": "https://image.freepik.com/vetores-gratis/feliz-dia-dos-namorados-coracao-brilhante-fundo-com-espaco-de-texto_1017-23191.jpg"
-        },
-        {
-            "id": 2,
-            "titulo": "Dia dos Namorados",
-            "imagem": "../../img/Section1.png"
-        },
-        {
-            "id": 3,
-            "titulo": "Dia dos Namorados",
-            "imagem": "../../img/Section1.png"
-        }
-    ];
+        useEffect(() => {
+            api.get('/api/',{
+            }).then(response => {
+                setGifts(response.data);
+            })
 
-
+        }, [])
 
     return (
     <div className="container">
+
         <Nav routeName={routeName}></Nav>
 
         <div className="section1" >
-            <div>
+        <img src={BackgroundImageSection1} alt="backgroundImage"/>
+            <div className="section1Div">
                 <h1>
                     Você precisa de
                 </h1>
@@ -48,11 +46,9 @@ export default function Home({routeName}) {
                 <h2>
                     Nós podemos te ajudar!
                 </h2>
-
-
                 <div className="button"><Link to="/">Encontrar</Link></div>
             </div>
-            <img src={BackgroundImageSection1} alt="backgroundImage"/>
+            
         </div>
         <div className="section2">
             <div className="divH1">
@@ -62,18 +58,34 @@ export default function Home({routeName}) {
                 <Divider component="hr" variant="inset" />
             </div>
             <div className="items">
-                {posts.map((post) =>
-                    <div key={post.id}>
-                        <h3>{post.titulo}</h3>
+                {gifts.map((gift) =>
+                    <div key={gift.id}>
+                        <h3>{gift.titulo}</h3>
                         <div className="item">
-                            <h3>Ver Mais</h3>
-                            <img src={post.imagem} alt={post.titulo} />
+                            <Link to="">Ver Mais</Link>
+                            <img src={gift.imagem} alt={gift.titulo} />
                         </div>
                     </div>
                 )}
             </div>
         </div>
-        <img src="../../img/Section1.png" alt="backgroundImage"/>
+        <div className="section3" style={backGroundImageSection3} >
+                <div className="section3Text">
+                        <p>
+                            Se tu tens uma recomendação
+                        </p>
+                        <p>
+                            <span>de presente nos envie</span>
+                        </p>
+                        <p>
+                            ajude a nos tornarmos melhor
+                        </p>
+                        <Link className="buttonSection3" to="/">
+                           Recomendar
+                        </Link>
+                </div>
+
+        </div>
     </div>
     );
 }

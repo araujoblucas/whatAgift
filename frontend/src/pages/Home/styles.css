@@ -3,8 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-
+    scroll-behavior: smooth;
 }
+
+body::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 8px;
+} 
+  
+body::-webkit-scrollbar-thumb {   
+    background-color: #32292F;   
+    border-radius: 8px;
+}
+
 .container {
     background-color: #F0F7F4;
 }
@@ -13,28 +24,35 @@
 .section1 {
     margin-top: 70px;
     display: flex;
+    flex-direction: row-reverse;
     width: 100vw;
     height: 90vh;
     justify-content: space-between;
     text-align: center;
 }
 
-.section1 img {
-
+.section1Div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-self: center;   
+    margin-left: 15vw; 
+    overflow: visible;
+    
+}
+.section1Div img {
     display: flex;
     margin-bottom: 0;
     align-self: flex-end;
     justify-self: flex-end;
     height: 100vh;
-
 }
 
                               /* TEXTOS */
 
 
-.section1 div h1 {
-    margin-top: 125px;
-    margin-left: 15vw;
+.section1Div h1 {
     font-size: 48px;
     font-weight: 700;
     line-height: 50px;
@@ -43,17 +61,16 @@
 
 }
 
-.section1 div h1 + h1 {
+.section1Div h1 + h1 {
     margin-top: 0px;
-    margin-left: 15vw;
     font-size: 58px;
     overflow-y: hidden;
     font-weight: 900;
 
 }
 
-.section1 div h2 {
-    margin-left: 15vw;
+.section1Div h2 {
+    
     font-size: 24px;
     line-height: 24px;
     overflow-y: hidden;
@@ -61,7 +78,7 @@
     color: #BB8E6C;
 }
 
-.section1 div h2 + h2 {
+.section1Div h2 + h2 {
     font-weight: bold;
     font-style: italic;
 }
@@ -70,7 +87,7 @@
 
 .button {
     margin-top: 20px;
-    margin-left: 19vw;
+    
     width: 250px;
     height: 75px;
     border-radius: 12px;
@@ -101,7 +118,7 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 92vh;
+    height: 100vh;
     text-align: center;
     background-color: #fff;
 }
@@ -111,7 +128,7 @@
 }
 
 .section2 .divH1 h1 {
-    margin-top: 8vh;
+    margin-top: 4vh;
     margin-left:10vw;
     text-align: left;
     font-size: 44px;
@@ -129,7 +146,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 15px;
+    margin-top: 25px;
+    font-size: 20px;
 }
 
 .section2 .item {
@@ -138,19 +156,83 @@
     text-align: center;
     margin-top: 10px;
     background-color: #DBF2EE;
-    width: 250px;
-    height: 320px;
+    width: 330px;
+    height: 370px;
 }
 
-.item h3 {
+.item a {
     margin-top: 5px ;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
 }
-
 
 .section2 .items .item img {
-    width: 150px;
-    height: 270px;
+    width: 230px;
+    height: 320px;
     margin-top: 10px;
     margin-left: 50px;
 
+}
+
+
+                            /* SECTION 3 */
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 94vh;
+    text-align: center;
+    overflow-y: hidden;
+    
+}
+
+.section3Text {
+    display: flex;
+    overflow-y: hidden;
+    width: 50vw;
+    flex-direction: column;
+    text-align: center;
+    color: rgba(184, 12, 9, 0.85);
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    text-shadow: 1px 1px 1px #333;
+    margin-top: 17vh;
+    margin-left: 10vw;    
+    align-items: center;
+    
+}
+.section3 p {
+    overflow-y: hidden;
+}
+
+.section3Text p span {
+    font-size: 60px;
+    font-weight: 900;
+    overflow-y: hidden;
+    overflow-y: hidden;
+}
+
+
+
+
+.buttonSection3 {
+    background-color: #84030E;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 12px;
+    color: #CB8D66;
+    text-decoration: none;
+    font-size: 42px;
+    overflow-y: hidden;
+
+
+}
+.buttonSection3:hover {
+    filter: brightness(0.9);
 }

@@ -1,12 +1,9 @@
 import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import React, { Component, useState, useEffect  } from 'react';
-import api from '../../api';
+import React, { useState, useEffect  } from 'react';
 import './styles.css';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-
-const response = api.get('/');
 
 export default function Nav({routeName}) {
                 /*  */
