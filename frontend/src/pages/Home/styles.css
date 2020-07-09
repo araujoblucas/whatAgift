@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px;
     background-color: #DBF2EE;
     width: 330px;
-    height: 370px;
+    height: 65vh;
 }
 
 .item a {
@@ -169,11 +169,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section2 .items .item img {
-    width: 230px;
-    height: 320px;
+    width: 250px;
+    height: 55vh;
     margin-top: 10px;
     margin-left: 50px;
-
 }
 
 

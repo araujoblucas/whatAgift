@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import React, { useState, useEffect  } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom';
+
 
 
 export default function Nav({routeName}) {

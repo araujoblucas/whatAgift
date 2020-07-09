@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    
+    outline: 0;
+} 
+
+.containerRegister {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.boxRegister {
+    background-color: #32292F;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+
+.boxRegister h1 {
+    margin-top: 25px;
+    margin-left: -15vw;
+    color: #F0F7F4;
+    text-align: center;
+    font-size: 45px;
+    text-shadow: black 2px;
+    overflow: visible;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.divInputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.divInputs input {
+    border-top: none;
+    border-width: 0.3px;
+    border-right: none;
+    border-radius: 0px 0px 0px 10px;
+    -moz-border-radius: 0px 0px 0px 10px;
+    -webkit-border-radius: 0px 0px 0px 10px;
+    border-color:  #99E1D9;
+    margin-top: 5vh;
+    width: 20vw;
+    height: 50px;
+    padding-left: 10px;
+    vertical-align: middle;
+    background-color: #32292F;
+    color: #F0F7F4;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 32px;
+    vertical-align: middle;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.RegisterGroup {
+    display: flex;
+    width: 50vw;    
+    margin-top: 45px;
+    justify-content: space-around;
+    justify-items: space-around;
+    align-items: space-around;
+    align-content: space-around;
+}
+
+.RegisterGroup div {
+    width: 8vh;
+    height: 8vh;
+    background-color: #596E6F;
+    border-radius: 130px;
+    display: flex;    
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in 0.5s;
+    color: #F0F7F4;
+    opacity: 0.9;
+}
+.RegisterGroup div:hover {
+    color: #F0F7F4;
+    opacity: 1;
+    transition: ease-in 0.5s;
+}
+.RegisterGroup div a {
+    color: #F0F7F4;
+}
+
+.RegisterButton {
+    width: 10vw;
+    height: 7vh;
+    background-color: #596E6F;
+    border: 3px solid #4C575A;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F0F7F4;
+    opacity: 0.9;
+    text-decoration: none;
+    transition: ease-in 0.5s;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 2.5px;
+    font-size: 23px;
+    overflow: visible;
+}
+
+.RegisterButton:hover {
+    opacity: 1;
+    transition: ease-in 0.5s;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 23px;
+    letter-spacing: 2.5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
