@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register'
-
+import Profile from './pages/Profile'
 
 export default function Routes() {
     return (
@@ -14,6 +14,7 @@ export default function Routes() {
             <Route path="/" exact component={() => <Home routeName='home'/> } />
             <Route path="/Login" exact component={() => <Login routeName='login' /> } />
             <Route path="/register" component={() => <Register routeName='register' /> } />
+            <Route path="/profile" component={() => <Profile routeName='profile' /> } />
         </Switch>
     </BrowserRouter>
     );

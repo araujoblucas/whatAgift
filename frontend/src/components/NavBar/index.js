@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
 import { NavLink, Link } from 'react-router-dom';
+import NavLogin from '../NavLogin';
 import React, { useState, useEffect  } from 'react';
 import './styles.css';
 
@@ -67,9 +68,9 @@ useEffect(() => {
                 </NavLink>
             </li>
             <li className={LoginActive}>
-                <NavLink to="/login">
-                    Login
-                </NavLink>
+                
+                    <NavLogin />
+                
             </li>
         </div>
     </div>

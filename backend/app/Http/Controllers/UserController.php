@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+Use Exception;
 
 
 
@@ -38,7 +39,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        DB::beginTransaction();
         try {
+
             DB::table('users')->insert(
                 [
                     'name' => $request->name,
@@ -47,12 +50,15 @@ class UserController extends Controller
                     'image' => $request->image
                 ]
             );
-            return "Inserido com Sucesso";
-        } catch (Throwable $e) {
-            return "Erro!";
-        }
-    }
 
+        } catch (\Throwable $e) {
+            return "Já email cadastrado!";
+        }
+
+        DB::commit();
+        return "Inserido com Sucesso";
+
+    }
     /**
      * Display the specified resource.
      *

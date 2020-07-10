@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
 import Nav from '../../components/NavBar';
+import NavLogin from '../../components/NavLogin';
 import api from '../../api';
 import './styles.css';
 import { Link, useHistory } from 'react-router-dom';
@@ -29,7 +30,7 @@ export default function Register({routeName}) {
             alert(`${response.data}`);
             history.push('/');
         } catch (err) {
-            alert("Erro no cadastro, tente novamente");
+            alert("Email já cadastrado!");
         }
     }
 
