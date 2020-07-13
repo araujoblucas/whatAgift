@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 Use Exception;
 
 
@@ -88,9 +89,30 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $requests = $request;
+        $crendentials = $request->only('email', 'password');
+        if(Auth::attempt($crendentials)) {
+
+            DB::beginTransaction();
+
+            DB::table('users')->where('id', $request->id)->update(
+            [
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->newPassword),
+                'image' => $request->image
+            ]);
+
+            DB::commit();
+            return response()->json("Alteração de dados concluida com sucesso!", 200);
+
+        } else {
+            return response()->json("Erro ao atualizar, verifique sua senha", 400);
+        }
+
+
     }
 
     /**
