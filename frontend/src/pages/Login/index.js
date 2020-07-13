@@ -40,7 +40,7 @@ export default function Login({routeName}) {
                 <h1>Bem-Vindo</h1>
 
                 <input 
-                    className="inputLogin" 
+                    className="inputLogin inputMini" 
                     placeholder="E-mail" 
                     type="email" 
                     value={email}

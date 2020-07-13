@@ -14,7 +14,7 @@ export default function Nav({routeName}) {
     const RecomendeActive =  routeName === '' ? 'liActive' : '';
     const SpecialDateActive = routeName === 'register' ? 'liActive' : '';
     const FindGiftActive = '';
-    const LoginActive = routeName === 'login' ? 'liActive' : '';
+    const LoginActive = ( routeName === 'login' ) || (routeName === 'profile') ? 'liActive' : '';
 
     const handleScroll = () => {
         let position = window.pageYOffset;
@@ -38,8 +38,9 @@ useEffect(() => {
 
     return (
     <div className={'nav'+shortNav} >
+        
         <div className={'logo'+shortNav}>
-            <Link to="/">
+            <NavLink to="/">
                 <span>
                 <p>What
                     <br />
@@ -48,7 +49,7 @@ useEffect(() => {
                 <h1>
                     A
                 </h1>
-            </Link>
+            </NavLink>
         </div>
 
         <div className={'menuLinks'+shortNav}>
