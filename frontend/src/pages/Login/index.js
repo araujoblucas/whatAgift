@@ -16,7 +16,7 @@ export default function Login({routeName}) {
     const history = useHistory();
 
     async function handleLogin(e) {
-        
+        e.preventDefault();
 
         try {
             const response = await api.post('/api/user/login', { email, password });
@@ -36,7 +36,7 @@ export default function Login({routeName}) {
         <Nav routeName={routeName}></Nav>
 
         <div className="containerLogin ">
-            <div className="boxLogin">
+            <form className="boxLogin" onSubmit={handleLogin}>
                 <h1>Bem-Vindo</h1>
 
                 <input 
@@ -58,8 +58,8 @@ export default function Login({routeName}) {
                     <Link to="/register">Registrar</Link>
                     <Link to="/">Esqueceu a senha?</Link>
                 </div>
-                <a className="boxLoginP" onClick={() => handleLogin()}>Entrar</a>
-            </div>
+                <button className="boxLoginP" type="submit">Entrar</button>
+            </form>
         </div>
 
     </div>

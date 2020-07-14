@@ -17,7 +17,7 @@ export default function Register({routeName}) {
     const [password, setPassword] = useState('');
 
     async function handleRegister(e) {
-        
+        e.preventDefault();
         const data = {
             name,
             email,
@@ -42,53 +42,59 @@ export default function Register({routeName}) {
         <div className="containerRegister ">
             <div className="boxRegister">
                 <h1>Vem ser um de nós</h1>
+                <form onSubmit={handleRegister}>
+                    <div className="divInputs">
+                        
+                        <input 
+                            className="inputRegister" 
+                            name="email" 
+                            placeholder="E-mail" 
+                            type="email" 
+                            required
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                        />
 
-                <div className="divInputs">
-                    
-                    <input 
-                        className="inputRegister" 
-                        name="email" 
-                        placeholder="E-mail" 
-                        type="email" 
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                    />
+                        <input 
+                            className="inputRegister" 
+                            name="name" 
+                            placeholder="Nome"
+                            required
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                        />
 
-                    <input 
-                        className="inputRegister" 
-                        name="name" 
-                        placeholder="Nome"
-                        value={name}
-                        onChange={e => setName(e.target.value)}
-                    />
+                        <input 
+                            className="inputRegister" 
+                            name="password" 
+                            placeholder="Senha" 
+                            type="password"
+                            required
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
 
-                    <input 
-                        className="inputRegister" 
-                        name="password" 
-                        placeholder="Senha" 
-                        type="password"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                    />
+                        <input 
+                            className="inputRegister" 
+                            name="image" 
+                            placeholder="Imagem" 
+                            required
+                            value={image}
+                            onChange={e => setImage(e.target.value)}
+                        />
 
-                    <input 
-                        className="inputRegister" 
-                        name="image" 
-                        placeholder="Imagem" 
-                        value={image}
-                        onChange={e => setImage(e.target.value)}
-                    />
-
-                </div>
-                <div className="RegisterGroup" >
-                    <Link onClick={() => history.goBack()}>
-                        <div>
-                            <FiArrowLeft size={32} />
-                        </div>
-                    </Link>
-                    <Link className="RegisterButton" onClick={() => handleRegister()}>Cadastrar</Link>
-                </div>
+                    </div>
+                    <div className="RegisterGroup" >
+                        <Link onClick={() => history.goBack()}>
+                            <div>
+                                <FiArrowLeft size={32} />
+                            </div>
+                        </Link>
+                        <button className="RegisterButton" type="submit">Cadastrar</button>
+                    </div>
+                </form>
             </div>
+            
         </div>
 
     </div>

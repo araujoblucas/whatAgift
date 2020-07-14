@@ -1,0 +1,43 @@
+
+.sidebarProfile {
+    margin-top: 5vw;
+    width: 20vw;
+    height: 80vh;
+    border-radius: 12px;
+    color: #F0F7F4;
+    font-size: 26px;
+    text-align: center;
+}
+
+.sidebarProfile li {
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #32292F;
+    border: solid 2px #99E1D9;
+    filter: brightness(0.75);
+}
+
+
+.sidebarProfile li a {
+    color: #F0F7F4;
+    text-decoration: none;
+    font-size: 26px;
+    text-align: center;
+}
+
+.sidebarButtonActive {
+    background-color: #433A3F !important;
+    filter: brightness(1) !important;
+    border: solid 4px #BB8E6C !important;
+}
+
+.sidebarProfile li:hover {
+    filter: brightness(1);
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #32292F;
+    border: solid 2px #99E1D9;
+}
+

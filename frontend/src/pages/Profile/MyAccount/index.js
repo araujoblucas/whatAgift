@@ -1,12 +1,14 @@
 import ReactDOM from 'react-dom';
 import React, {useState} from 'react';
-import Nav from '../../components/NavBar';
-import api from '../../api';
-import { Link, useHistory } from 'react-router-dom';
+import Nav from '../../../components/NavBar';
+import MyAccountSidebar from '../../../components/MyAccountSidebar';
+import api from '../../../api';
+import { useHistory } from 'react-router-dom';
 import './styles.css';
 
 
-export default function Profile({routeName}) {
+export default function MyAccount({routeName}) {
+    const [id, setId] = useState(localStorage.getItem('userId'));
     const [name, setName] = useState(localStorage.getItem('userName'));
     const [email, setEmail] = useState(localStorage.getItem('userEmail'));
     const [newPassword, setNewPassword] = useState('');
@@ -14,10 +16,40 @@ export default function Profile({routeName}) {
     const [password, setPassword] = useState('');
     
     
-    const id = localStorage.getItem('userId');
+    
  
     
     const history = useHistory();
+
+    async function update(e) {
+        e.preventDefault();
+        let data = {
+            id,
+            name,
+            email,
+            image,
+            password,
+            newPassword
+        };
+        try {
+            let response = await api.post('/api/user/update', data);
+            alert("Atualizado com sucesso!");
+            localStorage.setItem('userId', response.data.id);
+            localStorage.setItem('userName', response.data.name);
+            localStorage.setItem('userEmail', response.data.email);
+            localStorage.setItem('userImage', response.data.image);
+            setEmail(response.data.email);
+            setName(response.data.name);
+            setId(response.data.id);
+            setImage(response.data.image);
+            history.push('/profile');
+
+        } catch (err) {
+            alert("Erro ao atualizar, verifique sua senha")
+            
+        }
+    }
+
 
     function handleLogout(){
         localStorage.clear();
@@ -27,15 +59,19 @@ export default function Profile({routeName}) {
     return (
     <div>
         <Nav routeName={routeName}></Nav>
+        
 
         <div className="containerProfile">
-            <div className="boxProfile">
+
+            <MyAccountSidebar pageName="MyAccount"/>
+
+            <form className="boxProfile" onSubmit={update} >
                 <h1>Minha Conta</h1>
 
                 <div className="mediumDiv">
                     <div>
                         <div className="mediumDivPhotoLogout">
-                            <img src="https://pm1.narvii.com/6349/90afaadab7eeba9dd998886b0c7f9938be5daddc_00.jpg"/>
+                            <img src={image} alt={name}/>
 
                             <button onClick={() => handleLogout()}>Logout</button>
                         </div>
@@ -62,11 +98,13 @@ export default function Profile({routeName}) {
                         name="password" 
                         placeholder="Nova Senha" 
                         type="password"
+                        required
                         value={newPassword}
                         onChange={e => setNewPassword(e.target.value)}
                     />
 
                     <input 
+                        className="inputMini"
                         name="image" 
                         placeholder="Imagem" 
                         value={image}
@@ -79,22 +117,19 @@ export default function Profile({routeName}) {
                     <input 
                         className="footerInput"
                         name="newPassword" 
+                        type="password"
+                        required
                         placeholder="Senha Atual" 
                         value={password}
                         onChange={e => setPassword(e.target.value)}    
                     />
-                    <div className="buttonProfile">
+                    <button type="submit" className="buttonProfile">
                         Confirmar
-                    </div>
+                    </button>
 
                 </div>
-
-            </div>
-            {/* <p>{name} </p>
-            <p> {email} </p>
-            <p> {id} </p>
-
-            <Link to="" onClick={() => handleLogout()} >Logout</Link> */}
+                
+            </form>
         </div>
 
     </div>
@@ -103,6 +138,6 @@ export default function Profile({routeName}) {
 
 
 
-if (document.getElementById('Profile')) {
-    ReactDOM.render(<Profile />, document.getElementById('Profile'));
+if (document.getElementById('MyAccount')) {
+    ReactDOM.render(<MyAccount />, document.getElementById('MyAccount'));
 }

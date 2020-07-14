@@ -10,6 +10,6 @@ export default function NavLogin() {
     if(userName == null){
         return <NavLink to="/login">Login</NavLink>;
     } else {
-        return <NavLink to="/profile">Minha Conta</NavLink>
+        return <NavLink to="/profile/MyAccount">Minha Conta</NavLink>
     }
 }

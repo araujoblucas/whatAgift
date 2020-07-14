@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import NavLogin from '../NavLogin';
 import React, { useState, useEffect  } from 'react';
 import './styles.css';
