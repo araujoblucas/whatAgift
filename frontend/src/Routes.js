@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import MyAccount from './pages/Profile/MyAccount';
 import FavoriteList from './pages/Profile/FavoriteList';
+import PostGift from './pages/Profile/PostGift';
 
 export default function Routes() {
     return (
@@ -17,6 +18,7 @@ export default function Routes() {
             <Route path="/register" component={() => <Register routeName='register' /> } />
             <Route path="/profile/MyAccount" component={() => <MyAccount routeName='profile' /> } />
             <Route path="/profile/FavoriteList" component={() => <FavoriteList routeName='profile' /> } />
+            <Route path="/profile/PostGift" component={() => <PostGift routeName='profile' /> } />
         </Switch>
     </BrowserRouter>
     );

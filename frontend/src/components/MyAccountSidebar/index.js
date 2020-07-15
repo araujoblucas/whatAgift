@@ -7,6 +7,7 @@ export default function MyAccountSidebar ({pageName}){
 
     const MyAccount =  pageName === 'MyAccount' ? 'sidebarButtonActive' : '';   
     const FavoriteList = pageName === 'FavoriteList' ? 'sidebarButtonActive' : '';
+    const PostGift = pageName === 'PostGift' ? 'sidebarButtonActive' : '';
     // const FindGiftActive = '';
     // const LoginActive = ( pageName === 'login' ) || (pageName === 'profile') ? 'sidebarButtonActive' : '';
 
@@ -16,9 +17,10 @@ export default function MyAccountSidebar ({pageName}){
     return (
         <div className="sidebarProfile">
             <ul>
-                <li className={MyAccount}><Link to="/MyAccount">Minha conta</Link></li>
+                <li className={MyAccount}><Link to="/profile/MyAccount">Minha conta</Link></li>
+                <li className={PostGift}><Link to="/profile/PostGift">Postar presente</Link></li>
                 <li className={FavoriteList}><Link to="/profile/FavoriteList">Listar Favoritos</Link></li>
-                <li>Postar presente</li>
+                
                 <li>Listar meus presentes</li>
                 <li>Logout</li>
 
