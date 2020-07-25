@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
 import Nav from '../../components/NavBar';
-import NavLogin from '../../components/NavLogin';
 import api from '../../api';
 import './styles.css';
 import { Link, useHistory } from 'react-router-dom';

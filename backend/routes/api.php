@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::apiResource('/', 'GiftController');
 Route::apiResource('/user', 'UserController');
+Route::apiResource('/gift', 'GiftController');
 Route::post('/user/login', 'LoginController@login');
 Route::post('/user/update', 'UserController@update');

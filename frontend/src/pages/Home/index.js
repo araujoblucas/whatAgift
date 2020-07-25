@@ -60,10 +60,10 @@ export default function Home({routeName}) {
             <div className="items">
                 {gifts.map((gift) =>
                     <div key={gift.id}>
-                        <h3>{gift.titulo}</h3>
+                        <h3>{gift.name}</h3>
                         <div className="item">
                             <Link to="">Ver Mais</Link>
-                            <img src={gift.imagem} alt={gift.titulo} />
+                            <img src={gift.image} alt={gift.name} />
                         </div>
                     </div>
                 )}

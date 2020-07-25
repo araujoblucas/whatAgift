@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 * {
-    box-sizing: border-box;
+    z-index: 0;
 }
 .nav {
     top:0;
@@ -13,6 +13,7 @@
     justify-content: space-between;
     height: 70px;
     transition: ease-in 0.1s;
+    z-index: 100 !important;
 
 }
 .logo a {
@@ -101,6 +102,7 @@
     justify-content: space-between;
     transition: ease-in 1s;
     margin:0;
+    z-index: 100 !important;
 
 }
 .logoShort a {
@@ -149,12 +151,12 @@
     transition: ease-in 1s;
     display: flex;
     list-style-type: none;
+    
 
 
 }
 .menuLinksShort li {
     display: flex;
-
     text-decoration: none;
     align-items: flex-end;
     padding-bottom: 10px;

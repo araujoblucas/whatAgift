@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class GiftController extends Controller
@@ -13,25 +14,11 @@ class GiftController extends Controller
      */
     public function index()
     {
-        $arr = array(
-            array(
-                "id" => 1,
-                "titulo"=> "Dia dos Namorados",
-                "imagem"=> "https://github.com/araujoblucas/whatAgift/blob/master/frontend/src/img/gift1.jpg?raw=true"
-            ),
-            array(
-                "id"=> 2,
-                "titulo"=> "Aniversário",
-                "imagem"=> "https://github.com/araujoblucas/whatAgift/blob/master/frontend/src/img/gift2.jpg?raw=true"
-            ),
-            array(
-                "id"=> 3,
-                "titulo"=> "Dia dos Pais",
-                "imagem"=> "https://github.com/araujoblucas/whatAgift/blob/master/frontend/src/img/gift3.jpg?raw=true"
-            )
-        );
 
-        return response()->json($arr);
+        $dados = DB::table('gifts')->select('id', 'name', 'image')->limit(3)->get();
+
+
+        return response()->json($dados);
     }
 
     /**
@@ -53,7 +40,25 @@ class GiftController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attempt = null;
+
+        if(DB::table('users')->where('email', $request->email)->exists()) {
+
+            $attempt = DB::table('gifts')->insertGetId([
+                'name' => $request->name,
+                'description' => $request->description,
+                'cost' => $request->cost,
+                'user_id' => $request->user_id,
+                'image' => $request->image,
+                'tags' => $request->tags,
+            ]);
+        }
+
+        if($attempt !== null) {
+            return response()->json("Inserido com Sucesso!", 200);
+        } else {
+            return response()->json("Erro ao inserir o Post", 400);
+        }
     }
 
     /**

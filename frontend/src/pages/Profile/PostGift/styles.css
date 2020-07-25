@@ -6,12 +6,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.containerPostGift {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
 .boxPostGift {
     background-color: #32292F;
-    margin-top: 5vw;
+    margin-top: 85px !important;
     width: 70vw;
-    height: 80vh;
+    overflow-x: hidden;	   
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -21,8 +27,74 @@
     justify-items: center;
     justify-content: space-around;
 }
-
-.editorPost {
-    border: '1px solid gray';
-    min-height: '6em'
+.boxPostGift h1 {
+    margin-top: 20px;
+    
+    color: aliceblue;
 }
+.boxInputsGiftForm {
+    display: flex;
+    width: 70vw;
+    justify-content: space-around;
+}
+
+
+.boxInputsGiftForm input {
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-top: none;
+    border-width: 0.3px;
+    border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    border-color:  #99E1D9;
+    vertical-align: middle;
+    background-color: #32292F;
+    color: #F0F7F4;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+    font-style: italic;
+}  
+
+.boxPostGift button {    
+    margin-top: 20px;    
+    width: 250px;
+    height: 75px;
+    border-radius: 12px;
+    background-color:rgba(50, 41, 47, 0.1);
+    padding: 10px;
+    overflow: hidden;
+    font-family: 'Quattrocento Sans', sans-serif;
+    border-width: 0.3px;
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 400;
+    border-color:  #99E1D9;
+
+}   
+
+
+.boxPostGift button {    
+    margin-top: 20px;    
+    width: 210px;
+    height: 75px;
+    border-radius: 12px;
+    background-color:rgba(50, 41, 47, 0.1);
+    padding: 10px;
+    overflow: hidden;
+    font-family: 'Quattrocento Sans', sans-serif;
+    border-width: 0.3px;
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 400;
+    border-color:  #99E1D9;
+}   
+
+button:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 

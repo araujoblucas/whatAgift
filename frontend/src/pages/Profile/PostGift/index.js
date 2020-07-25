@@ -1,59 +1,112 @@
 import ReactDOM from 'react-dom';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Nav from '../../../components/NavBar';
 import MyAccountSidebar from '../../../components/MyAccountSidebar';
+import {useHistory} from 'react-router-dom';
 import api from '../../../api';
 import './styles.css';
 
-import CKEditor from '@ckeditor/ckeditor5-react';
-
-// NOTE: We use editor from source (not a build)!
-import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-
-import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
-import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
-import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
-import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-
+import { Editor } from "@tinymce/tinymce-react";
 
 export default function PostGift({routeName}) {
-    const editorConfiguration = {
-        plugins: [ Essentials, Bold, Italic, Paragraph ],
-        toolbar: [ 'bold', 'italic' ]
-    };
+
+    const history = useHistory();
+    const [name, setName] = useState('');
+    const [description, setDesc] = useState('');
+    const [tags, setTags] = useState('');
+    const [image, setImage] = useState('');
+    const [cost, setCost] = useState('');
+    const email = localStorage.getItem('userEmail');
+    const user_id = localStorage.getItem('userId');
+    
+    function setDataDesc (content, editor) {
+        setDesc(content);
+    }
+  
+    async function handlePostStore(e) {
+        e.preventDefault();
+        const data = {
+            email,
+            user_id,
+            name,
+            description,
+            cost,
+            image,
+            tags
+        };
+        console.log(data);
+        try {
+            const response = await api.post('/api/gift/', data);
+            alert(`${response.data}`);
+            if(response.status < 300) {
+                history.push('/profile/MyGifts');
+            }
+
+        } catch (err) {
+            alert("Erro ao postar, tente novamente!");
+        }        
+    }
+ 
+
+
 
     return (
     <div>
         <Nav routeName={routeName}></Nav>
         
 
-        <div className="containerProfile">
+        <div className="containerPostGift">
 
             <MyAccountSidebar pageName="PostGift"/>
+            <form className="boxPostGift" onSubmit={handlePostStore}>
+                <h1>Postar um Presente</h1>
+                <div className="boxInputsGiftForm" >
+                    <input 
+                        placeholder="Título"
+                        required
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                        />
+                    <input 
+                        placeholder="Imagem"
+                        value={image}
+                        onChange={e => setImage(e.target.value)}
+                      />
+                    <input 
+                        placeholder="Tags"
+                        value={tags}
+                        onChange={e => setTags(e.target.value)}
+                    />
+                    <input 
+                        placeholder="Cost"
+                        value={cost}
+                        onChange={e => setCost(e.target.value)}
+                    />
+                </div>
 
-            <div className="boxPostGift">
-                <CKEditor
-                    editor={ ClassicEditor }
-                    config={ editorConfiguration }
-                    data="<p>Hello from CKEditor 5!</p>"
-                    onInit={ editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log( 'Editor is ready to use!', editor );
-                    } }
-                    onChange={ ( event, editor ) => {
-                        const data = editor.getData();
-                        console.log( { event, editor, data } );
-                    } }
-                    onBlur={ editor => {
-                        console.log( 'Blur.', editor );
-                    } }
-                    onFocus={ editor => {
-                        console.log( 'Focus.', editor );
-                    } }
-                />
-                    
                 
-            </div>
+
+                <Editor
+                    apiKey="o8gkw4f5yk1bdwcxuol1xw6td2px2b9d4p13ba25h4yykwlw"
+                    plugins="wordcount"
+                    init={{                    
+                        width: '60vw',
+                        height: '80vh',
+                        menubar: false,                 
+                        plugins: [
+                        'advlist autolink lists link image charmap print preview anchor',
+                        'searchreplace visualblocks code fullscreen',
+                        'insertdatetime media table paste code help '
+                        ],
+                        toolbar:
+                        'undo redo | formatselect | bold italic backcolor | image | table | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | help'
+                    }}                
+                    value={description}
+                    onEditorChange={setDataDesc}
+                />
+
+                <button type="submit">CRIAR</button>
+            </form>
         </div>
 
     </div>

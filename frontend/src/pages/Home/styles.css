@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -11,7 +10,7 @@ body::-webkit-scrollbar {
     border-radius: 8px;
 } 
   
-body::-webkit-scrollbar-thumb {   
+body::-webkit-scrollbar-thumb { 
     background-color: #32292F;   
     border-radius: 8px;
 }
